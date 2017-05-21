@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h2 class="center iq-md-5 iq-sm-3">pro<span>iq</span></h2>
+		<form class="center iq-md-7 iq-sm-9" action="#" method="Post">
+			<div>
+				<i class="fa fa-envelope icon" id="email" aria-hidden="true"></i>
+			    <input class="input-form input" type="email" name="email" placeholder="write your email" required="required" />
+			</div>
+
+			<div>
+				<i class="fa fa-lock icon" id="pass" aria-hidden="true"></i>
+				<input class="input-form input" type="password" name="pass" placeholder="write your password" required="required" />
+			</div>
+
+
+			<input type="submit" name="login" value="login" />
+			
+		</form>
+
+		<div class="clear"></div>
+		<a href="#">Forgot account?</a>
+		<div class="clear"></div>
+	</header>
+
+	<div class="body">
+
+		<!---- Information to my site  ---->
+		<div class="information iq-sm-7">
+			<h3>Welcome in my web site pro<span>iq</span></h3>
+			<p>Hello My name's Issa Sofer,I from Iraq my work web design and programming, I've experience 1 year, <span>My skils</span>: <span class="skils">HTML CSS BOOTSTRAB JEQURY PHP</span></p>
+
+			<div class="clean-code iq-md-4 iq-sm-6 iq-xs-4">
+				<i class="fa fa-code" aria-hidden="true"></i>
+				<h3 class="center">Clean code</h3>
+				<p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt</p>
+			</div>
+
+			<div class="serves iq-md-4 iq-sm-6 iq-xs-4">
+				<i class="fa fa-code" aria-hidden="true"></i>
+				<h3 class="center">Serves</h3>
+				<p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt</p>
+			</div>
+
+			<div class="support iq-md-4 iq-sm-6 iq-xs-4">
+				<i class="fa fa-support" aria-hidden="true"></i>
+				<h3 class="center">Support</h3>
+				<p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt</p>
+			</div>
+		</div>
+
+		<div class="sign-up iq-sm-5">
+			<h2 class="h2">Create an account</h2>
+
+			<form class="form" action="#" method="POST">
+				<div class="user">
+					<i class="fa fa-user icon" id="email" aria-hidden="true"></i>
+					<input class="input-form full-width" type="text" placeholder="First Name" name="first-name" required="required" />
+				</div>
+
+				<div class="user">
+					<i class="fa fa-user icon" id="email" aria-hidden="true"></i>
+					<input class="input-form full-width" type="text" placeholder="Last Name" name="last-name" required="required" />
+				</div>
+
+				<div>
+					<i class="fa fa-envelope icon" id="email" aria-hidden="true"></i>
+					<input class="input-form full-width" type="email" placeholder="write email" name="email" required="required" />
+				</div>
+
+				<div>
+					<i class="fa fa-envelope icon" id="email" aria-hidden="true"></i>
+					<input class="input-form full-width" type="email" placeholder="write required email" name="Reqemail" required="required" />
+				</div>
+
+				<div>
+					<i class="fa fa-lock icon" id="email" aria-hidden="true"></i>
+					<input class="input-form full-width" type="password" placeholder="write password" name="pass" required="required" />
+				</div>
+
+				<div>
+					<i class="fa fa-lock icon" id="email" aria-hidden="true"></i>
+					<input class="input-form full-width" type="password" placeholder="write required password" name="Reqpass" required="required" />
+				</div>
+
+				<div>
+					<select id="years" name="years" class="years">
+						<option value="choose">Choose Years</option>
+					</select>
+
+					<select id="month" name="month" class="month">
+						<option value="choose">Choose month</option>
+					</select>
+
+
+					<select id="day" name="day" class="day">
+						<option value="choose">Choose day</option>
+					</select>
+				</div>
+
+				<input type="submit" name="sign-up" class="sign btn-iq-sign" value="Sign Up" />
+			</form>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<footer class="center">
+		<div class="social">
+            <h4><a href="#">social media</a></h4>
+            <a href="https://www.facebook.com/issaalhadithi" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com/issaalhadithi" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/issaalhadithi" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/isaalzien" target="_blank"><i class="fa fa-github"></i></a>
+		</div>
+		<span>copyright &copy 2017 Issa Alhadithi </span>
+	</footer>
+
+
+	<script type="text/javascript" src="../Myblog/layout/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+
+		$(function () {
+			'use strict';
+			function berth($start, $end, Id) {
+				for (var i = $start; i <= $end; i++) {
+					$("<option>", {value : i, text : i}, "</option>").appendTo($(Id));
+				}
+			}
+
+			berth("1900", "2017", "#years");
+			berth("1", "12", "#month");
+			berth("1", "30", "#day");
+
+
+			
+		    $('.input-form').focus(function () {
+		       $(this).css('border-color', '#8BC34A');
+		       $('.icon').css('color', '#45a6f9');
+		    });
+
+		     $('.input-form').blur(function () {
+		       $(this).css('border-color', '#45a6f9');
+		       $('.icon').css('color', '#cabfbf');
+		    });
+		});
+
+		
+
+	</script>
+</body>
+</html>
